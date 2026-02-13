@@ -1,275 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet ESP32 et Arduino IoT Cloud</title>
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-
-            <a class="navbar-brand" href="#accueil">ESP32 IoT Project</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#accueil">Accueil</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#usage">Usage</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#description">Description</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experimentation">Expérimentations</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#avis">Avis</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ACCUEIL -->
-    <section id="accueil" class="bg-light p-5">
-        <div class="container">
-
-            <h1>Projet ESP32 avec Arduino IoT Cloud</h1>
-
-            <p>
-                Ce projet consiste à expérimenter la carte ESP32 DevKit V1 avec la plateforme Arduino IoT Cloud.
-                L’objectif est de surveiller la température en temps réel et de contrôler une lampe à distance via une application mobile.
-            </p>
-
-            <p>
-                Cette technologie fait partie de l’Internet des objets (IoT), qui permet de connecter des objets physiques à Internet
-                afin de collecter et contrôler des données à distance.
-            </p>
-
-            <div class="text-center">
-                <img src="img/image0.png" class="img-fluid rounded shadow"
-                    alt="ESP32 DevKit V1">
-            </div>
-
-        </div>
-    </section>
-
-    <!-- USAGE -->
-    <section id="usage" class="bg-primary text-white p-5">
-        <div class="container">
-
-            <h1>Usage proposé</h1>
-
-            <h2>Hypothèse</h2>
-
-            <p>
-                L’ESP32 DevKit V1 peut être utilisé pour créer un système de surveillance de température et de contrôle d’éclairage à distance.
-                L’utilisateur peut consulter la température depuis une application mobile Arduino IoT Cloud et allumer ou éteindre une lampe.
-            </p>
-
-            <h2>Usage concret</h2>
-
-            <p>
-                Ce système peut être utilisé dans :
-            </p>
-
-            <ul>
-                <li>Maison intelligente (domotique)</li>
-                <li>Surveillance d’une pièce</li>
-                <li>Contrôle d’éclairage à distance</li>
-                <li>Surveillance d’un serveur ou laboratoire</li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#accueil">ESP32 IoT Project</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#usage">Usage</a></li>
+                <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experimentation">Expérimentations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#avis">Avis</a></li>
             </ul>
-
-            <p>
-                Cela permet d’améliorer le confort, la sécurité et l’automatisation.
-            </p>
-
         </div>
-    </section>
+    </div>
+</nav>
 
-    <!-- DESCRIPTION -->
-    <section id="description" class="bg-light p-5">
-
-        <div class="container">
-
-            <h1>Description de l'objet expérimenté</h1>
-
-            <h2>Nom</h2>
-
-            <p>
-                ESP32 DevKit V1
-            </p>
-
-            <h2>Fabricant</h2>
-
-            <p>
-                Espressif Systems
-            </p>
-
-            <h2>Fonctionnalités</h2>
-
-            <ul>
-                <li>Microcontrôleur avec WiFi intégré</li>
-                <li>Connexion à Internet</li>
-                <li>Lecture de capteurs (température)</li>
-                <li>Contrôle de LED ou lampe</li>
-                <li>Compatible avec Arduino IoT Cloud</li>
-            </ul>
-
-            <h2>Caractéristiques techniques</h2>
-
-            <ul>
-                <li>Processeur : Dual-core 240 MHz</li>
-                <li>WiFi intégré</li>
-                <li>Bluetooth intégré</li>
-                <li>Tension : 3.3V</li>
-                <li>Ports GPIO pour capteurs et LED</li>
-            </ul>
-
-            <h2>Schématisation matérielle</h2>
-
-            <div class="text-center">
-                <img src="img/image0.png" class="img-fluid rounded shadow">
-            </div>
-
+<section id="accueil" class="bg-light p-5">
+    <div class="container">
+        <h1>Projet ESP32 avec Arduino IoT Cloud</h1>
+        <p>Ce projet consiste à expérimenter la carte ESP32 DevKit V1 avec la plateforme Arduino IoT Cloud. L’objectif est de surveiller la température en temps réel et de contrôler une lampe à distance via une application mobile.</p>
+        <p>Cette technologie fait partie de l’Internet des objets (IoT), qui permet de connecter des objets physiques à Internet afin de collecter et contrôler des données à distance.</p>
+        <div class="text-center">
+            <img src="img/image0.png" class="img-fluid rounded shadow" alt="ESP32 DevKit V1">
         </div>
+    </div>
+</section>
 
-    </section>
+<section id="usage" class="bg-primary text-white p-5">
+    <div class="container">
+        <h1>Usage proposé</h1>
+        <h2>Hypothèse</h2>
+        <p>L’ESP32 DevKit V1 peut être utilisé pour créer un système de surveillance de température et de contrôle d’éclairage à distance. L’utilisateur peut consulter la température depuis une application mobile Arduino IoT Cloud et allumer ou éteindre une lampe.</p>
+        <h2>Usage concret</h2>
+        <p>Ce système peut être utilisé dans :</p>
+        <ul>
+            <li>Maison intelligente (domotique)</li>
+            <li>Surveillance d’une pièce</li>
+            <li>Contrôle d’éclairage à distance</li>
+            <li>Surveillance d’un serveur ou laboratoire</li>
+        </ul>
+        <p>Cela permet d’améliorer le confort, la sécurité et l’automatisation.</p>
+    </div>
+</section>
 
-    <!-- EXPERIMENTATION -->
-    <section id="experimentation" class="bg-primary text-white p-5">
-
-        <div class="container">
-
-            <h1>Expérimentations</h1>
-
-            <h2>Expérimentation 1 : Connexion au WiFi</h2>
-
-            <p>
-                Objectif : Vérifier que l’ESP32 peut se connecter à Internet.
-            </p>
-
-            <p>
-                Résultat : Connexion réussie et visible dans Arduino IoT Cloud.
-            </p>
-
-            <div class="text-center">
-                <img src="img/image0.png" class="img-fluid rounded shadow">
+<section id="description" class="bg-light p-5">
+    <div class="container">
+        <h1>Description de l'objet expérimenté</h1>
+        <h2>Nom</h2>
+        <p>ESP32 DevKit V1</p>
+        <h2>Fabricant</h2>
+        <p>Espressif Systems</p>
+        <h2>Fonctionnalités</h2>
+        <ul>
+            <li>Microcontrôleur avec WiFi intégré</li>
+            <li>Connexion à Internet</li>
+            <li>Lecture de capteurs (température)</li>
+            <li>Contrôle de LED ou lampe</li>
+            <li>Compatible avec Arduino IoT Cloud</li>
+        </ul>
+        <h2>Caractéristiques techniques</h2>
+        <ul>
+            <li>Processeur : Dual-core 240 MHz</li>
+            <li>WiFi intégré</li>
+            <li>Bluetooth intégré</li>
+            <li>Tension : 3.3V</li>
+            <li>Ports GPIO pour capteurs et LED</li>
+        </ul>
+        <h2>Schématisation matérielle</h2>
+        <div class="row g-3 text-center">
+            <div class="col-md-6">
+                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Schéma matériel 1">
             </div>
-
-            <h2>Expérimentation 2 : Lecture de température</h2>
-
-            <p>
-                Objectif : Lire la température et l’afficher dans l’application.
-            </p>
-
-            <p>
-                Résultat : La température est affichée correctement en temps réel.
-            </p>
-
-            <div class="text-center">
-                <img src="img/image0.png" class="img-fluid rounded shadow">
+            <div class="col-md-6">
+                <img src="img/image1.png" class="img-fluid rounded shadow" alt="Schéma matériel 2">
             </div>
+        </div>
+    </div>
+</section>
 
-            <h2>Expérimentation 3 : Contrôle de lampe</h2>
+<section id="experimentation" class="bg-primary text-white p-5">
+    <div class="container">
+        <h1>Expérimentations</h1>
 
-            <p>
-                Objectif : Allumer et éteindre une lampe via l’application.
-            </p>
-
-            <p>
-                Résultat : La lampe répond correctement aux commandes.
-            </p>
-
-            <div class="text-center">
-                <img src="img/image0.png" class="img-fluid rounded shadow">
+        <div class="row align-items-center my-4">
+            <div class="col-md-6">
+                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 1">
             </div>
-
+            <div class="col-md-6">
+                <h3>Expérimentation 1 : Connexion au WiFi</h3>
+                <p>Objectif : Vérifier que l’ESP32 peut se connecter à Internet.</p>
+                <p>Résultat : Connexion réussie et visible dans Arduino IoT Cloud.</p>
+            </div>
         </div>
 
-    </section>
-
-    <!-- AVIS -->
-    <section id="avis" class="bg-light p-5">
-
-        <div class="container">
-
-            <h1>Avis sur la technologie</h1>
-
-            <h2>Stabilité</h2>
-
-            <p>
-                L’ESP32 est stable et fonctionne correctement.
-            </p>
-
-            <h2>Efficacité</h2>
-
-            <p>
-                La communication avec Arduino IoT Cloud est rapide.
-            </p>
-
-            <h2>Maintenabilité</h2>
-
-            <p>
-                Facile à programmer et modifier.
-            </p>
-
-            <h2>Avantages</h2>
-
-            <ul>
-                <li>Faible coût</li>
-                <li>WiFi intégré</li>
-                <li>Facile à utiliser</li>
-            </ul>
-
-            <h2>Inconvénients</h2>
-
-            <ul>
-                <li>Nécessite Internet</li>
-                <li>Configuration initiale nécessaire</li>
-            </ul>
-
-            <h2>Avis final</h2>
-
-            <p>
-                L’ESP32 est une excellente solution pour les projets IoT.
-            </p>
-
+        <div class="row align-items-center my-4">
+            <div class="col-md-6 order-md-2">
+                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 2">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3>Expérimentation 2 : Lecture de température</h3>
+                <p>Objectif : Lire la température et l’afficher dans l’application.</p>
+                <p>Résultat : La température est affichée correctement en temps réel.</p>
+            </div>
         </div>
 
-    </section>
+        <div class="row align-items-center my-4">
+            <div class="col-md-6">
+                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 3">
+            </div>
+            <div class="col-md-6">
+                <h3>Expérimentation 3 : Contrôle de lampe</h3>
+                <p>Objectif : Allumer et éteindre une lampe via l’application.</p>
+                <p>Résultat : La lampe répond correctement aux commandes.</p>
+            </div>
+        </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center p-4">
+    </div>
+</section>
 
-        Projet ESP32 IoT Cloud – Cégep – 2026
+<section id="avis" class="bg-light p-5">
+    <div class="container">
+        <h1>Avis sur la technologie</h1>
+        <h2>Stabilité</h2>
+        <p>L’ESP32 est stable et fonctionne correctement.</p>
+        <h2>Efficacité</h2>
+        <p>La communication avec Arduino IoT Cloud est rapide.</p>
+        <h2>Maintenabilité</h2>
+        <p>Facile à programmer et modifier.</p>
+        <h2>Avantages</h2>
+        <ul>
+            <li>Faible coût</li>
+            <li>WiFi intégré</li>
+            <li>Facile à utiliser</li>
+        </ul>
+        <h2>Inconvénients</h2>
+        <ul>
+            <li>Nécessite Internet</li>
+            <li>Configuration initiale nécessaire</li>
+        </ul>
+        <h2>Avis final</h2>
+        <p>L’ESP32 est une excellente solution pour les projets IoT.</p>
+    </div>
+</section>
 
-    </footer>
+<footer class="bg-dark text-white text-center p-4">
+    Projet ESP32 IoT Cloud – Cégep – 2026
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
