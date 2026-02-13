@@ -1,131 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Projet ESP32 et Arduino IoT Cloud</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Accueil</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+            <a class="navbar-brand" href="#accueil">ESP32 IoT Project</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#s1">Usage</a>
+                        <a class="nav-link" href="#accueil">Accueil</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#s2">Description</a>
+                        <a class="nav-link" href="#usage">Usage</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#s3">Expérimentations</a>
+                        <a class="nav-link" href="#description">Description</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#s3">Avis</a>
+                        <a class="nav-link" href="#experimentation">Expérimentations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avis">Avis</a>
                     </li>
 
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container lh-lg">
-        <section id="s1" class="bg-light p-5">
-            <h1>Usage</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolore saepe delectus? Illum maxime aliquid
-                alias hic amet labore, minima veritatis reiciendis mollitia facere obcaecati perferendis vel modi eius
-                explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, assumenda voluptatibus
-                recusandae magni quae libero similique voluptate, facere aliquam soluta perferendis. Deserunt
-                praesentium ex
-                eaque natus consectetur velit quae eveniet possimus dolorem, illo ab illum sapiente iusto maiores in aut
-                assumenda perferendis numquam eius ad cum. Ullam mollitia molestias delectus laboriosam dolores. Labore,
-                temporibus consectetur rem similique hic, molestiae ipsam reiciendis deserunt aperiam beatae cumque. Sed
-                sapiente assumenda neque eligendi eveniet fugit voluptatem, consequuntur natus deleniti adipisci aut
-                nostrum
-                aperiam dolore deserunt aliquam, corporis rerum architecto atque quas voluptatibus ducimus ipsum
-                laudantium
-                nihil distinctio. Voluptatibus beatae sit quisquam voluptas delectus!</p>
-        </section>
-        <section id="s2" class="bg-primary text-white p-5">
-            <h1>Description</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolore saepe delectus? Illum maxime aliquid
-                alias hic amet labore, minima veritatis reiciendis mollitia facere obcaecati perferendis vel modi eius
-                explicabo! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nulla incidunt debitis, id
-                laborum quam consequatur reprehenderit corrupti, neque perferendis deserunt expedita placeat et animi
-                natus
-                quis ipsum? Earum labore voluptate minima cupiditate voluptatem, natus quisquam modi saepe corrupti, aut
-                sint eos quam voluptatum quasi soluta iste facilis neque quos asperiores reiciendis ea perferendis,
-                provident atque! Praesentium aliquid nemo esse ratione non aliquam culpa, est incidunt necessitatibus
-                perferendis iusto recusandae sapiente? Quibusdam eos porro quis facilis officia eligendi fuga quos,
-                velit,
-                iste atque nesciunt magni. Commodi labore ea libero minus! Placeat nemo delectus facilis inventore
-                distinctio nihil sit at libero?</p>
-        </section>
-        <section id="s3" class="bg-light p-5">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-            </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="s4" class="bg-primary text-white p-5">
-            <h1>Avis</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolore saepe delectus? Illum maxime aliquid
-                alias hic amet labore, minima veritatis reiciendis mollitia facere obcaecati perferendis vel modi eius
-                explicabo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ea ducimus cum quam
-                repellat
-                distinctio? A cum sunt beatae quas recusandae quaerat, quo voluptates? Nemo impedit reiciendis
-                voluptatibus
-                tempora nihil error dolorum odio praesentium! Odio magnam dolorem at delectus, tempore dolore blanditiis
-                modi! Temporibus error voluptate earum reiciendis ducimus debitis enim sunt qui? Aspernatur ipsam
-                reiciendis
-                vel id repellat eveniet magni voluptate eaque reprehenderit provident nihil libero quam aliquid velit
-                sequi
-                doloremque et, nam laudantium dicta veniam quae earum recusandae. Culpa officia et iste incidunt omnis.
-                Exercitationem quae, distinctio esse quaerat, voluptates aliquid iure itaque atque vero tempora sapiente
-                accusamus.</p>
-        </section>
-    </div>
-    <footer class="bg-light text-center p-5">
+    <!-- ACCUEIL -->
+    <section id="accueil" class="bg-light p-5">
         <div class="container">
-            <h2>ici footer</h2>
+
+            <h1>Projet ESP32 avec Arduino IoT Cloud</h1>
+
+            <p>
+                Ce projet consiste à expérimenter la carte ESP32 DevKit V1 avec la plateforme Arduino IoT Cloud.
+                L’objectif est de surveiller la température en temps réel et de contrôler une lampe à distance via une application mobile.
+            </p>
+
+            <p>
+                Cette technologie fait partie de l’Internet des objets (IoT), qui permet de connecter des objets physiques à Internet
+                afin de collecter et contrôler des données à distance.
+            </p>
+
+            <div class="text-center">
+                <img src="img/image0.png" class="img-fluid rounded shadow"
+                    alt="ESP32 DevKit V1">
+            </div>
+
         </div>
+    </section>
+
+    <!-- USAGE -->
+    <section id="usage" class="bg-primary text-white p-5">
+        <div class="container">
+
+            <h1>Usage proposé</h1>
+
+            <h2>Hypothèse</h2>
+
+            <p>
+                L’ESP32 DevKit V1 peut être utilisé pour créer un système de surveillance de température et de contrôle d’éclairage à distance.
+                L’utilisateur peut consulter la température depuis une application mobile Arduino IoT Cloud et allumer ou éteindre une lampe.
+            </p>
+
+            <h2>Usage concret</h2>
+
+            <p>
+                Ce système peut être utilisé dans :
+            </p>
+
+            <ul>
+                <li>Maison intelligente (domotique)</li>
+                <li>Surveillance d’une pièce</li>
+                <li>Contrôle d’éclairage à distance</li>
+                <li>Surveillance d’un serveur ou laboratoire</li>
+            </ul>
+
+            <p>
+                Cela permet d’améliorer le confort, la sécurité et l’automatisation.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section id="description" class="bg-light p-5">
+
+        <div class="container">
+
+            <h1>Description de l'objet expérimenté</h1>
+
+            <h2>Nom</h2>
+
+            <p>
+                ESP32 DevKit V1
+            </p>
+
+            <h2>Fabricant</h2>
+
+            <p>
+                Espressif Systems
+            </p>
+
+            <h2>Fonctionnalités</h2>
+
+            <ul>
+                <li>Microcontrôleur avec WiFi intégré</li>
+                <li>Connexion à Internet</li>
+                <li>Lecture de capteurs (température)</li>
+                <li>Contrôle de LED ou lampe</li>
+                <li>Compatible avec Arduino IoT Cloud</li>
+            </ul>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <ul>
+                <li>Processeur : Dual-core 240 MHz</li>
+                <li>WiFi intégré</li>
+                <li>Bluetooth intégré</li>
+                <li>Tension : 3.3V</li>
+                <li>Ports GPIO pour capteurs et LED</li>
+            </ul>
+
+            <h2>Schématisation matérielle</h2>
+
+            <div class="text-center">
+                <img src="img/image0.png" class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIMENTATION -->
+    <section id="experimentation" class="bg-primary text-white p-5">
+
+        <div class="container">
+
+            <h1>Expérimentations</h1>
+
+            <h2>Expérimentation 1 : Connexion au WiFi</h2>
+
+            <p>
+                Objectif : Vérifier que l’ESP32 peut se connecter à Internet.
+            </p>
+
+            <p>
+                Résultat : Connexion réussie et visible dans Arduino IoT Cloud.
+            </p>
+
+            <div class="text-center">
+                <img src="img/image0.png" class="img-fluid rounded shadow">
+            </div>
+
+            <h2>Expérimentation 2 : Lecture de température</h2>
+
+            <p>
+                Objectif : Lire la température et l’afficher dans l’application.
+            </p>
+
+            <p>
+                Résultat : La température est affichée correctement en temps réel.
+            </p>
+
+            <div class="text-center">
+                <img src="img/image0.png" class="img-fluid rounded shadow">
+            </div>
+
+            <h2>Expérimentation 3 : Contrôle de lampe</h2>
+
+            <p>
+                Objectif : Allumer et éteindre une lampe via l’application.
+            </p>
+
+            <p>
+                Résultat : La lampe répond correctement aux commandes.
+            </p>
+
+            <div class="text-center">
+                <img src="img/image0.png" class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AVIS -->
+    <section id="avis" class="bg-light p-5">
+
+        <div class="container">
+
+            <h1>Avis sur la technologie</h1>
+
+            <h2>Stabilité</h2>
+
+            <p>
+                L’ESP32 est stable et fonctionne correctement.
+            </p>
+
+            <h2>Efficacité</h2>
+
+            <p>
+                La communication avec Arduino IoT Cloud est rapide.
+            </p>
+
+            <h2>Maintenabilité</h2>
+
+            <p>
+                Facile à programmer et modifier.
+            </p>
+
+            <h2>Avantages</h2>
+
+            <ul>
+                <li>Faible coût</li>
+                <li>WiFi intégré</li>
+                <li>Facile à utiliser</li>
+            </ul>
+
+            <h2>Inconvénients</h2>
+
+            <ul>
+                <li>Nécessite Internet</li>
+                <li>Configuration initiale nécessaire</li>
+            </ul>
+
+            <h2>Avis final</h2>
+
+            <p>
+                L’ESP32 est une excellente solution pour les projets IoT.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-4">
+
+        Projet ESP32 IoT Cloud – Cégep – 2026
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
