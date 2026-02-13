@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet ESP32 et Arduino IoT Cloud</title>
+    <title>Projet Arduino ESP32 IoT Cloud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#accueil">ESP32 IoT Project</a>
+        <a class="navbar-brand" href="#accueil">Arduino IoT Project</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,11 +29,15 @@
 
 <section id="accueil" class="bg-light p-5">
     <div class="container">
-        <h1>Projet ESP32 avec Arduino IoT Cloud</h1>
-        <p>Ce projet consiste à expérimenter la carte ESP32 DevKit V1 avec la plateforme Arduino IoT Cloud. L’objectif est de surveiller la température en temps réel et de contrôler une lampe à distance via une application mobile.</p>
-        <p>Cette technologie fait partie de l’Internet des objets (IoT), qui permet de connecter des objets physiques à Internet afin de collecter et contrôler des données à distance.</p>
-        <div class="text-center">
-            <img src="img/image0.png" class="img-fluid rounded shadow" alt="ESP32 DevKit V1">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Projet Arduino IoT : ESP32 et Arduino Uno</h1>
+                <p>Ce projet combine une carte Arduino Uno et une ESP32 pour créer un système IoT complet. Le but est de collecter des données depuis un capteur de température, les envoyer à Arduino IoT Cloud, et pouvoir piloter des objets connectés à distance.</p>
+                <p>La programmation est réalisée en C++, et Arduino IoT Cloud est configuré pour créer une application web/mobile permettant de visualiser les données en temps réel et de contrôler des dispositifs comme des lampes ou relais.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/image1.png" class="img-fluid w-80 rounded shadow" alt="ESP32 et Arduino Uno">
+            </div>
         </div>
     </div>
 </section>
@@ -42,49 +46,54 @@
     <div class="container">
         <h1>Usage proposé</h1>
         <h2>Hypothèse</h2>
-        <p>L’ESP32 DevKit V1 peut être utilisé pour créer un système de surveillance de température et de contrôle d’éclairage à distance. L’utilisateur peut consulter la température depuis une application mobile Arduino IoT Cloud et allumer ou éteindre une lampe.</p>
-        <h2>Usage concret</h2>
-        <p>Ce système peut être utilisé dans :</p>
+        <p>Le projet permet de surveiller la température via un capteur connecté à Arduino Uno ou ESP32 et d’envoyer ces données vers Arduino IoT Cloud. L’utilisateur peut recevoir les mesures sur une application et envoyer des ordres pour contrôler des objets connectés.</p>
+        <h2>Applications concrètes</h2>
+        <p>Exemples d’utilisation :</p>
         <ul>
-            <li>Maison intelligente (domotique)</li>
-            <li>Surveillance d’une pièce</li>
-            <li>Contrôle d’éclairage à distance</li>
-            <li>Surveillance d’un serveur ou laboratoire</li>
+            <li>Surveillance de la température dans une maison ou un laboratoire</li>
+            <li>Contrôle à distance d’une lampe, ventilateur ou chauffage</li>
+            <li>Création d’une application IoT pour visualiser les données et contrôler les objets connectés</li>
+            <li>Projets éducatifs pour apprendre l’IoT et la programmation C++</li>
         </ul>
-        <p>Cela permet d’améliorer le confort, la sécurité et l’automatisation.</p>
+        <p>Ces applications combinent automatisation, confort, sécurité et apprentissage pratique de l’IoT.</p>
     </div>
 </section>
 
 <section id="description" class="bg-light p-5">
     <div class="container">
-        <h1>Description de l'objet expérimenté</h1>
-        <h2>Nom</h2>
-        <p>ESP32 DevKit V1</p>
-        <h2>Fabricant</h2>
-        <p>Espressif Systems</p>
-        <h2>Fonctionnalités</h2>
+        <h1>Description des composants</h1>
+        <h2>Arduino Uno</h2>
         <ul>
-            <li>Microcontrôleur avec WiFi intégré</li>
-            <li>Connexion à Internet</li>
-            <li>Lecture de capteurs (température)</li>
-            <li>Contrôle de LED ou lampe</li>
-            <li>Compatible avec Arduino IoT Cloud</li>
+            <li>Microcontrôleur ATmega328P</li>
+            <li>Compatible avec capteurs analogiques et numériques</li>
+            <li>Programmation en C++ via Arduino IDE</li>
+            <li>Connexion série pour communiquer avec ESP32 ou ordinateur</li>
         </ul>
-        <h2>Caractéristiques techniques</h2>
+        <h2>ESP32 DevKit V1</h2>
         <ul>
-            <li>Processeur : Dual-core 240 MHz</li>
-            <li>WiFi intégré</li>
-            <li>Bluetooth intégré</li>
-            <li>Tension : 3.3V</li>
-            <li>Ports GPIO pour capteurs et LED</li>
+            <li>Microcontrôleur avec WiFi et Bluetooth intégrés</li>
+            <li>Compatible avec Arduino IoT Cloud</li>
+            <li>Lecture de capteurs et contrôle d’actionneurs</li>
+        </ul>
+        <h2>Capteur de température</h2>
+        <ul>
+            <li>Mesure la température ambiante</li>
+            <li>Connecté à Arduino Uno ou ESP32</li>
+            <li>Envoi de données vers le cloud pour visualisation et analyse</li>
+        </ul>
+        <h2>Arduino IoT Cloud</h2>
+        <ul>
+            <li>Plateforme pour recevoir et visualiser les données des objets connectés</li>
+            <li>Création d’une application web/mobile pour pilotage et monitoring</li>
+            <li>Permet d’envoyer des ordres de contrôle aux cartes connectées</li>
         </ul>
         <h2>Schématisation matérielle</h2>
         <div class="row g-3 text-center">
             <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Schéma matériel 1">
+                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Schéma Arduino Uno">
             </div>
             <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Schéma matériel 2">
+                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Schéma ESP32">
             </div>
         </div>
     </div>
@@ -96,34 +105,34 @@
 
         <div class="row align-items-center my-4">
             <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 1">
+                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 1">
             </div>
             <div class="col-md-6">
                 <h3>Expérimentation 1 : Connexion au WiFi</h3>
-                <p>Objectif : Vérifier que l’ESP32 peut se connecter à Internet.</p>
-                <p>Résultat : Connexion réussie et visible dans Arduino IoT Cloud.</p>
+                <p>Objectif : Configurer ESP32 pour se connecter à Arduino IoT Cloud.</p>
+                <p>Résultat : La carte se connecte correctement et les données peuvent être envoyées au cloud.</p>
             </div>
         </div>
 
         <div class="row align-items-center my-4">
             <div class="col-md-6 order-md-2">
-                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 2">
+                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 2">
             </div>
             <div class="col-md-6 order-md-1">
                 <h3>Expérimentation 2 : Lecture de température</h3>
-                <p>Objectif : Lire la température et l’afficher dans l’application.</p>
-                <p>Résultat : La température est affichée correctement en temps réel.</p>
+                <p>Objectif : Lire les mesures du capteur de température via Arduino Uno ou ESP32 et les envoyer vers Arduino IoT Cloud.</p>
+                <p>Résultat : Les valeurs sont affichées en temps réel sur l’application IoT Cloud.</p>
             </div>
         </div>
 
         <div class="row align-items-center my-4">
             <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid rounded shadow" alt="Exp 3">
+                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 3">
             </div>
             <div class="col-md-6">
-                <h3>Expérimentation 3 : Contrôle de lampe</h3>
-                <p>Objectif : Allumer et éteindre une lampe via l’application.</p>
-                <p>Résultat : La lampe répond correctement aux commandes.</p>
+                <h3>Expérimentation 3 : Contrôle d’objets connectés</h3>
+                <p>Objectif : Envoyer des ordres de contrôle depuis Arduino IoT Cloud pour allumer/éteindre des lampes ou actionneurs.</p>
+                <p>Résultat : Les objets réagissent correctement aux commandes envoyées via l’application.</p>
             </div>
         </div>
 
@@ -134,29 +143,29 @@
     <div class="container">
         <h1>Avis sur la technologie</h1>
         <h2>Stabilité</h2>
-        <p>L’ESP32 est stable et fonctionne correctement.</p>
+        <p>ESP32 et Arduino Uno fonctionnent de manière fiable dans les projets IoT.</p>
         <h2>Efficacité</h2>
-        <p>La communication avec Arduino IoT Cloud est rapide.</p>
+        <p>La communication avec Arduino IoT Cloud est rapide et permet le monitoring en temps réel.</p>
         <h2>Maintenabilité</h2>
-        <p>Facile à programmer et modifier.</p>
+        <p>Le code C++ est simple à modifier et à adapter aux besoins du projet.</p>
         <h2>Avantages</h2>
         <ul>
-            <li>Faible coût</li>
-            <li>WiFi intégré</li>
-            <li>Facile à utiliser</li>
+            <li>Faible coût et matériel accessible</li>
+            <li>WiFi et Bluetooth intégrés sur ESP32</li>
+            <li>Visualisation et contrôle via Arduino IoT Cloud</li>
         </ul>
         <h2>Inconvénients</h2>
         <ul>
-            <li>Nécessite Internet</li>
-            <li>Configuration initiale nécessaire</li>
+            <li>Nécessite une connexion Internet pour le cloud</li>
+            <li>Configuration initiale et programmation requises</li>
         </ul>
         <h2>Avis final</h2>
-        <p>L’ESP32 est une excellente solution pour les projets IoT.</p>
+        <p>Le projet combinant Arduino Uno, ESP32 et Arduino IoT Cloud est idéal pour apprendre l’IoT, programmer en C++ et créer des applications connectées fonctionnelles.</p>
     </div>
 </section>
 
 <footer class="bg-dark text-white text-center p-4">
-    Projet ESP32 IoT Cloud – Cégep – 2026
+    Projet Arduino ESP32 IoT Cloud – Cégep – 2026
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
