@@ -1,173 +1,267 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Arduino ESP32 IoT Cloud</title>
+    <title>Station Météo IoT - DHT11 & ESP32</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#accueil">Arduino IoT Project</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#usage">Usage</a></li>
-                <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experimentation">Expérimentations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#avis">Avis</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#accueil">Station Météo IoT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#usage">Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experimentation">Expérimentations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#avis">Avis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="bg-light p-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Station Météo Connectée</h1>
+                    <h2>DHT11, ESP32 et Arduino IoT Cloud</h2>
+                    <p>Ce projet consiste à créer une station météo connectée simple et économique en utilisant un
+                        microcontrôleur <strong>ESP32</strong> et un capteur <strong>DHT11</strong>. Les données de
+                        température et d'humidité sont envoyées en temps réel vers la plateforme <strong>Arduino IoT
+                            Cloud</strong>, permettant une visualisation à distance depuis un smartphone, une tablette
+                        ou un ordinateur, où que vous soyez dans le monde.</p>
+                    <p>La programmation est réalisée en C++ dans l'IDE Arduino, et Arduino IoT Cloud est configuré pour
+                        créer un tableau de bord personnalisé permettant de visualiser les données en temps réel.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/img0.jpg" class="img-fluid w-80 rounded shadow" alt="ESP32 et capteur DHT11">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="bg-primary text-white p-5">
+        <div class="container">
+            <h1>Usage proposé</h1>
+            <h2>Objectif</h2>
+            <p>Le projet répond au besoin de <strong>surveillance environnementale à distance et à faible coût</strong>
+                :</p>
+            <ul>
+                <li><strong>Surveillance du confort domestique</strong> : Vérifier la température et l'humidité de votre
+                    maison pendant vos absences.</li>
+                <li><strong>Projets pédagogiques</strong> : Introduction concrète aux concepts de l'Internet des Objets
+                    (IoT) pour les étudiants et les makers débutants.</li>
+                <li><strong>Surveillance de plantes ou de serres</strong> : S'assurer que les conditions sont optimales
+                    pour la croissance des végétaux.</li>
+                <li><strong>Expérimentation IoT</strong> : Premiers pas concrets avec la plateforme Arduino IoT Cloud et
+                    la connectivité Wi-Fi.</li>
+            </ul>
+            <h2>Fonctionnalités</h2>
+            <ul>
+                <li>Mesure de la température de 0°C à 50°C (précision ±2°C)</li>
+                <li>Mesure de l'humidité relative de 20% à 80% (précision ±5%)</li>
+                <li>Connexion Wi-Fi automatique de l'ESP32</li>
+                <li>Synchronisation cloud vers Arduino IoT Cloud</li>
+                <li>Visualisation en temps réel via tableaux de bord personnalisables</li>
+                <li>Accès distant depuis l'application mobile ou un navigateur web</li>
             </ul>
         </div>
-    </div>
-</nav>
+    </section>
 
-<section id="accueil" class="bg-light p-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1>Projet Arduino IoT : ESP32 et Arduino Uno</h1>
-                <p>Ce projet combine une carte Arduino Uno et une ESP32 pour créer un système IoT complet. Le but est de collecter des données depuis un capteur de température, les envoyer à Arduino IoT Cloud, et pouvoir piloter des objets connectés à distance.</p>
-                <p>La programmation est réalisée en C++, et Arduino IoT Cloud est configuré pour créer une application web/mobile permettant de visualiser les données en temps réel et de contrôler des dispositifs comme des lampes ou relais.</p>
+    <section id="description" class="bg-light p-5">
+        <div class="container">
+            <h1>Description des composants</h1>
+
+            <h2>ESP32 DevKit V1</h2>
+            <ul>
+                <li>Microcontrôleur avec WiFi et Bluetooth intégrés</li>
+                <li>Compatible avec Arduino IoT Cloud</li>
+                <li>Lecture de capteurs et contrôle d'actionneurs</li>
+                <li>Programmation en C++ via Arduino IDE</li>
+            </ul>
+
+            <h2>Capteur DHT11</h2>
+            <ul>
+                <li>Mesure la température et l'humidité ambiante</li>
+                <li>Plage température : 0°C à 50°C (±2°C)</li>
+                <li>Plage humidité : 20% à 80% (±5%)</li>
+                <li>Fréquence d'échantillonnage : 1 Hz (max 1 lecture par seconde)</li>
+            </ul>
+
+            <h2>Arduino IoT Cloud</h2>
+            <ul>
+                <li>Plateforme pour recevoir et visualiser les données des objets connectés</li>
+                <li>Création d'une application web/mobile pour pilotage et monitoring</li>
+                <li>Plan gratuit : jusqu'à 5 "Choses", 10 variables par Chose</li>
+                <li>Mises à jour toutes les 10 secondes minimum</li>
+            </ul>
+
+            <h2>Schématisation matérielle</h2>
+            <p>Câblage du capteur DHT11 à l'ESP32 :</p>
+            <ul>
+                <li><strong>VCC (DHT11)</strong> → <strong>3.3V (ESP32)</strong></li>
+                <li><strong>DATA (DHT11)</strong> → <strong>GPIO 4 (ESP32)</strong></li>
+                <li><strong>GND (DHT11)</strong> → <strong>GND (ESP32)</strong></li>
+            </ul>
+            <p><em>Note : J'utilise le module DHT11 (carte bleue à 3 broches), la résistance pull-up est déjà
+                    intégrée.</em></p>
+
+
+            <img src="img/img3.png" class="img-fluid w-80 rounded shadow" alt="Schéma de câblage ESP32 et DHT11">
+            <p class="mt-2"><em>Schéma de connexion ESP32 - DHT11</em></p>
+
+        </div>
+    </section>
+
+    <section id="experimentation" class="bg-primary text-white p-5">
+        <div class="container">
+            <h1>Expérimentations</h1>
+
+            <div class="row align-items-center my-4">
+                <div class="col-md-6">
+                    <img src="img/img4.png" class="img-fluid w-80 rounded shadow" alt="Test moniteur série">
+                </div>
+                <div class="col-md-6">
+                    <h3>Expérimentation 1 : Montage, câblage et connexion Wi-Fi</h3>
+                    <p><strong>Objectif :</strong> Réaliser le montage matériel du capteur DHT11 avec l'ESP32, établir
+                        la connexion Wi-Fi et vérifier la communication avec le réseau.</p>
+                    <p><strong>Montage et câblage :</strong> Broche VCC du DHT11 → 3.3V ESP32, Broche DATA → GPIO4,
+                        Broche GND → GND.</p>
+                    <p><strong>Démarche :</strong> Installation des bibliothèques DHT, écriture d'un code de test avec
+                        identifiants Wi-Fi.</p>
+                    <p><strong>Résultat :</strong> L'ESP32 se connecte au Wi-Fi et affiche l'adresse IP. Les valeurs du
+                        capteur s'affichent.</p>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="img/image1.png" class="img-fluid w-80 rounded shadow" alt="ESP32 et Arduino Uno">
+
+            <div class="row align-items-center my-4">
+                <div class="col-md-6 order-md-2">
+                    <img src="img/img6.png" class="img-fluid w-80 rounded shadow" alt="Configuration Arduino IoT Cloud">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Expérimentation 2 : Configuration et intégration cloud</h3>
+                    <p><strong>Objectif :</strong> Configurer l'ESP32 sur Arduino IoT Cloud et intégrer le code du
+                        capteur.</p>
+                    <p><strong>Démarche :</strong> Création d'un compte, ajout d'un device ESP32, création des variables
+                        température/humidité, intégration du code de lecture DHT11 dans le sketch généré.</p>
+                    <p><strong>Résultat :</strong> L'ESP32 est connecté au cloud et les données sont envoyées toutes les
+                        10 minutes.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center my-4">
+                <div class="col-md-6">
+                    <img src="img/img5.png" class="img-fluid w-80 rounded shadow" alt="Tableau de bord final">
+                </div>
+                <div class="col-md-6">
+                    <h3>Expérimentation 3 : Visualisation et validation</h3>
+                    <p><strong>Objectif :</strong> Créer un tableau de bord et valider le fonctionnement complet.</p>
+                    <p><strong>Démarche :</strong> Création d'un dashboard avec widgets, liaison
+                        aux variables cloud, test en conditions réelles.</p>
+                    <p><strong>Résultat :</strong> Les données sont visibles en temps réel depuis l'application web, validant ainsi le projet.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="usage" class="bg-primary text-white p-5">
-    <div class="container">
-        <h1>Usage proposé</h1>
-        <h2>Hypothèse</h2>
-        <p>Le projet permet de surveiller la température via un capteur connecté à Arduino Uno ou ESP32 et d’envoyer ces données vers Arduino IoT Cloud. L’utilisateur peut recevoir les mesures sur une application et envoyer des ordres pour contrôler des objets connectés.</p>
-        <h2>Applications concrètes</h2>
-        <p>Exemples d’utilisation :</p>
-        <ul>
-            <li>Surveillance de la température dans une maison ou un laboratoire</li>
-            <li>Contrôle à distance d’une lampe, ventilateur ou chauffage</li>
-            <li>Création d’une application IoT pour visualiser les données et contrôler les objets connectés</li>
-            <li>Projets éducatifs pour apprendre l’IoT et la programmation C++</li>
-        </ul>
-        <p>Ces applications combinent automatisation, confort, sécurité et apprentissage pratique de l’IoT.</p>
-    </div>
-</section>
+    <section id="avis" class="bg-light p-5">
+        <div class="container">
+            <h1>Avis sur la technologie</h1>
 
-<section id="description" class="bg-light p-5">
-    <div class="container">
-        <h1>Description des composants</h1>
-        <h2>Arduino Uno</h2>
-        <ul>
-            <li>Microcontrôleur ATmega328P</li>
-            <li>Compatible avec capteurs analogiques et numériques</li>
-            <li>Programmation en C++ via Arduino IDE</li>
-            <li>Connexion série pour communiquer avec ESP32 ou ordinateur</li>
-        </ul>
-        <h2>ESP32 DevKit V1</h2>
-        <ul>
-            <li>Microcontrôleur avec WiFi et Bluetooth intégrés</li>
-            <li>Compatible avec Arduino IoT Cloud</li>
-            <li>Lecture de capteurs et contrôle d’actionneurs</li>
-        </ul>
-        <h2>Capteur de température</h2>
-        <ul>
-            <li>Mesure la température ambiante</li>
-            <li>Connecté à Arduino Uno ou ESP32</li>
-            <li>Envoi de données vers le cloud pour visualisation et analyse</li>
-        </ul>
-        <h2>Arduino IoT Cloud</h2>
-        <ul>
-            <li>Plateforme pour recevoir et visualiser les données des objets connectés</li>
-            <li>Création d’une application web/mobile pour pilotage et monitoring</li>
-            <li>Permet d’envoyer des ordres de contrôle aux cartes connectées</li>
-        </ul>
-        <h2>Schématisation matérielle</h2>
-        <div class="row g-3 text-center">
-            <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Schéma Arduino Uno">
-            </div>
-            <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Schéma ESP32">
-            </div>
-        </div>
-    </div>
-</section>
+            <h2>Stabilité</h2>
+            <p>Le DHT11 offre une stabilité correcte pour des applications non critiques (±1°C, ±2-3% HR). L'ESP32
+                maintient une connexion Wi-Fi stable et tente de se reconnecter automatiquement en cas de perte de
+                signal.</p>
 
-<section id="experimentation" class="bg-primary text-white p-5">
-    <div class="container">
-        <h1>Expérimentations</h1>
+            <h2>Efficacité</h2>
+            <p>La communication avec Arduino IoT Cloud est rapide (latence de quelques secondes). Le système est idéal
+                pour une première expérience IoT réussie avec un budget très limité.</p>
 
-        <div class="row align-items-center my-4">
-            <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 1">
-            </div>
-            <div class="col-md-6">
-                <h3>Expérimentation 1 : Connexion au WiFi</h3>
-                <p>Objectif : Configurer ESP32 pour se connecter à Arduino IoT Cloud.</p>
-                <p>Résultat : La carte se connecte correctement et les données peuvent être envoyées au cloud.</p>
-            </div>
-        </div>
+            <h2>Maintenabilité</h2>
+            <p>Le code C++ est simple à modifier. Le capteur DHT11 est facilement remplaçable (moins de 2$). L'ESP32
+                peut être reprogrammé à volonté via USB.</p>
 
-        <div class="row align-items-center my-4">
-            <div class="col-md-6 order-md-2">
-                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 2">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <h3>Expérimentation 2 : Lecture de température</h3>
-                <p>Objectif : Lire les mesures du capteur de température via Arduino Uno ou ESP32 et les envoyer vers Arduino IoT Cloud.</p>
-                <p>Résultat : Les valeurs sont affichées en temps réel sur l’application IoT Cloud.</p>
+            <h2>Avantages</h2>
+            <ul>
+                <li>Coût très faible (moins de 15$ pour l'ensemble)</li>
+                <li>Simplicité de mise en œuvre grâce à Arduino IoT Cloud</li>
+                <li>Accessible aux débutants en IoT</li>
+                <li>Visualisation professionnelle sans développement web</li>
+                <li>Accès mobile via application dédiée</li>
+                <li>Grande communauté et nombreux tutoriels</li>
+            </ul>
+
+            <h2>Inconvénients</h2>
+            <ul>
+                <li>Précision limitée du DHT11 (±2°C, ±5% HR)</li>
+                <li>Plage de mesure restreinte (0-50°C, 20-80% HR)</li>
+                <li>Dépendance au Wi-Fi et à une plateforme cloud</li>
+                <li>Limites du compte gratuit (5 choses max)</li>
+                <li>Pas de stockage local des données</li>
+            </ul>
+
+            <h2>Comparaison rapide</h2>
+            <table class="table table-bordered bg-white">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Solution</th>
+                        <th>Avantages</th>
+                        <th>Inconvénients</th>
+                        <th>Coût</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ESP32 + DHT11 + Arduino IoT Cloud</strong></td>
+                        <td>Simple, rapide, économique</td>
+                        <td>Précision limitée</td>
+                        <td>12-15$</td>
+                    </tr>
+                    <tr>
+                        <td>ESP32 + DHT22 + Arduino IoT Cloud</td>
+                        <td>Meilleure précision</td>
+                        <td>Coût légèrement supérieur</td>
+                        <td>15-20$</td>
+                    </tr>
+                    <tr>
+                        <td>Station météo commerciale</td>
+                        <td>Design soigné, application mature</td>
+                        <td>Coût élevé, non personnalisable</td>
+                        <td>100-200$</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Avis final</h2>
+            <div class="p-3 bg-white rounded shadow-sm">
+                <p>Le projet <strong>Station Météo Connectée avec DHT11, ESP32 et Arduino IoT Cloud</strong> est une
+                    excellente introduction à l'IoT pour les débutants et les makers. Il offre un rapport qualité-prix
+                    exceptionnel et permet de concrétiser rapidement un projet fonctionnel et utile.</p>
+                <p><strong>Idéal pour :</strong> les étudiants, les makers débutants, l'enseignement, la surveillance
+                    basique à moindre coût.</p>
+                <p><strong>À éviter si :</strong> vous avez besoin de mesures scientifiques précises, pas de Wi-Fi
+                    stable, ou une aversion pour les solutions cloud.</p>
+                <p>Une fois maîtrisé, le projet peut évoluer vers un DHT22 plus précis, l'ajout d'autres capteurs
+                    (luminosité, pression).</p>
             </div>
         </div>
+    </section>
 
-        <div class="row align-items-center my-4">
-            <div class="col-md-6">
-                <img src="img/image0.png" class="img-fluid w-80 rounded shadow" alt="Exp 3">
-            </div>
-            <div class="col-md-6">
-                <h3>Expérimentation 3 : Contrôle d’objets connectés</h3>
-                <p>Objectif : Envoyer des ordres de contrôle depuis Arduino IoT Cloud pour allumer/éteindre des lampes ou actionneurs.</p>
-                <p>Résultat : Les objets réagissent correctement aux commandes envoyées via l’application.</p>
-            </div>
-        </div>
+    <footer class="bg-dark text-white text-center p-4">
+        Projet Station Météo IoT – DHT11, ESP32 & Arduino IoT Cloud – Cégep – 2026
+    </footer>
 
-    </div>
-</section>
-
-<section id="avis" class="bg-light p-5">
-    <div class="container">
-        <h1>Avis sur la technologie</h1>
-        <h2>Stabilité</h2>
-        <p>ESP32 et Arduino Uno fonctionnent de manière fiable dans les projets IoT.</p>
-        <h2>Efficacité</h2>
-        <p>La communication avec Arduino IoT Cloud est rapide et permet le monitoring en temps réel.</p>
-        <h2>Maintenabilité</h2>
-        <p>Le code C++ est simple à modifier et à adapter aux besoins du projet.</p>
-        <h2>Avantages</h2>
-        <ul>
-            <li>Faible coût et matériel accessible</li>
-            <li>WiFi et Bluetooth intégrés sur ESP32</li>
-            <li>Visualisation et contrôle via Arduino IoT Cloud</li>
-        </ul>
-        <h2>Inconvénients</h2>
-        <ul>
-            <li>Nécessite une connexion Internet pour le cloud</li>
-            <li>Configuration initiale et programmation requises</li>
-        </ul>
-        <h2>Avis final</h2>
-        <p>Le projet combinant Arduino Uno, ESP32 et Arduino IoT Cloud est idéal pour apprendre l’IoT, programmer en C++ et créer des applications connectées fonctionnelles.</p>
-    </div>
-</section>
-
-<footer class="bg-dark text-white text-center p-4">
-    Projet Arduino ESP32 IoT Cloud – Cégep – 2026
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
